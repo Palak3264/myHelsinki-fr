@@ -32,7 +32,7 @@ export class Places extends Component {
         if (!this.state.loadedAll && !this.state.isLoading) {
             this.setState({isLoading: true, isError: false})
             try {
-                const res = await axios.get('/v1/places', {
+                const res = await axios.get('https://my-helsinki-2021-ba.herokuapp.com/api/v1/places', {
                     params: {
                         page: page,
                         limit: limit
